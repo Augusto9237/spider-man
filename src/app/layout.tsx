@@ -18,6 +18,7 @@ export default function RootLayout({
       <body >
         <header>
           <Image
+            className="menu"
             src="/icons/menu.svg"
             alt='Opções de menu'
             width={36}
@@ -34,6 +35,7 @@ export default function RootLayout({
           </Link>
 
           <Image
+            className="login"
             src="/icons/user.svg"
             alt='Login'
             width={36}

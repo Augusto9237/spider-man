@@ -33,8 +33,14 @@ header {
   z-index: 4;
 
   @media only screen and (max-width: 767px) {
+    .menu {
+      height: 16px;
+      width: 32px;
+    }
+
     .logo {
       height: 35px;
+      width: 132px;
       overflow: hidden;
 
       img {
@@ -42,6 +48,11 @@ header {
         width: 100%;
         object-fit: contain;
       }
+    }
+
+    .login {
+      height: 22px;
+      width: 23px;
     }
   }
 }
