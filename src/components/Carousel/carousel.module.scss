@@ -1,9 +1,10 @@
 .container {
   display: flex;
+  flex: 1;
 
   @media only screen and (max-width: 767px) {
     flex-direction: column;
-    padding: 0 40px;
+    min-height: 100vh;
   }
 }
 
@@ -14,7 +15,8 @@
   left: -10%;
 
   @media only screen and (max-width: 767px) {
-    left: 0%;
+    left: -90%;
+    margin-top: 32px;
   }
 }
 
@@ -28,7 +30,7 @@
   }
 
   @media only screen and (max-width: 767px) {
-    height: 50vh;
+    height: 600px;
   }
 }
 
@@ -36,6 +38,14 @@
   flex: 1;
   position: relative;
   margin-top: 3rem;
+  height: 100%;
+
+  @media only screen and (max-width: 767px) {
+    margin-top: -80%;
+    padding: 100px 40px 0px 40px;
+    background: linear-gradient(0deg, #ce0000 85.5%, rgba(206, 0, 0, 0) 93.6%);
+    z-index: 20;
+  }
 }
 
 .hero {
@@ -43,6 +53,10 @@
   position: absolute;
   width: 500px;
   left: 0;
+
+  @media only screen and (max-width: 767px) {
+    width: 100%;
+  }
 
   img {
     height: 100%;

@@ -12,6 +12,7 @@
     width: 100%;
     position: absolute;
     top: 0;
+    bottom: 0;
   }
 }
 
@@ -22,6 +23,10 @@ body {
   max-width: $max-width;
   height: calc(100vh - 3.5rem);
   overflow: hidden;
+
+  @media only screen and (max-width: 767px) {
+    overflow-y: auto;
+  }
 }
 
 header {
