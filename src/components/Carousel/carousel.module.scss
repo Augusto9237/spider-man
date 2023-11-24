@@ -43,8 +43,57 @@
   @media only screen and (max-width: 767px) {
     margin-top: -80%;
     padding: 100px 40px 0px 40px;
-    background: linear-gradient(0deg, #ce0000 85.5%, rgba(206, 0, 0, 0) 93.6%);
     z-index: 20;
+
+    &.spider-man-616 {
+      background: linear-gradient(
+        0deg,
+        #ce0000 85.5%,
+        rgba(206, 0, 0, 0) 93.6%
+      );
+    }
+    &.mulher-aranha-65 {
+      background: linear-gradient(
+        0deg,
+        #ff1997 85.5%,
+        rgba(206, 0, 0, 0) 93.6%
+      );
+    }
+    &.spider-man-1610 {
+      background: linear-gradient(
+        0deg,
+        #00003e 85.5%,
+        rgba(206, 0, 0, 0) 93.6%
+      );
+    }
+    &.sp-dr-14512 {
+      background: linear-gradient(
+        0deg,
+        #00b2ff 85.5%,
+        rgba(206, 0, 0, 0) 93.6%
+      );
+    }
+    &.spider-ham-8311 {
+      background: linear-gradient(
+        0deg,
+        #ff8a00 85.5%,
+        rgba(206, 0, 0, 0) 93.6%
+      );
+    }
+    &.spider-man-90214 {
+      background: linear-gradient(
+        0deg,
+        #090304 85.5%,
+        rgba(206, 0, 0, 0) 93.6%
+      );
+    }
+    &.spider-man-928 {
+      background: linear-gradient(
+        0deg,
+        #3200c2 85.5%,
+        rgba(206, 0, 0, 0) 93.6%
+      );
+    }
   }
 }
 

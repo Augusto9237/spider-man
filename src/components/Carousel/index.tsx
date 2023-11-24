@@ -169,7 +169,7 @@ export default function Carousel({ heroes, activeId }: IProps) {
         </div>
       </div>
       <motion.div
-        className={styles.details}
+        className={`${styles.details} ${styles[visibleItems[enPosition.MIDDLE].id]}`}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 2 }}
