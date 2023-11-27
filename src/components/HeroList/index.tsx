@@ -1,8 +1,11 @@
 'use client'
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useState } from "react";
+import { wrap } from "popmotion";
 
 import HeroPicture from "../HeroPicture";
+import { HeroSlider } from "../HeroSlider";
 
 import styles from "./heroesList.module.scss";
 
@@ -10,11 +13,16 @@ import { spidermanFont } from "@/fonts"
 import { IHeroData } from "@/interfaces/heroes"
 
 
+
 interface IProps {
   heroes: IHeroData[]
 }
 
 export default function HeroesList({ heroes }: IProps) {
+  const [[page, direction], setPage] = useState([0, 0]);
+
+  const imageIndex = wrap(0, heroes.length, page);
+
   return (
     <>
       <motion.h1
@@ -32,20 +40,31 @@ export default function HeroesList({ heroes }: IProps) {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 2 }}
       >
-        {heroes.map(hero => (
-          <motion.div
-            key={hero.id}
-            className={`${styles.imageContainer} ${styles[hero.id]}`}
-            whileHover={{ scale: 1.3 }}
-            whileTap={{ scale: 0.8 }}
-            transition={{ duration: 0.8 }}
-          >
-            <Link href={`/hero/${hero.id}`}>
-              <HeroPicture hero={hero} />
-            </Link>
-          </motion.div>
-        ))}
+        {heroes.map((hero, i) => {
+          const widthWindow = window.screen.width
+          return (
+            <motion.div
+              key={hero.id}
+              className={`${styles.imageContainer} ${styles[hero.id]}`}
+              style={widthWindow < 768 && i === imageIndex ? { display: 'none' } : {}}
+              whileHover={{ scale: 1.3 }}
+              whileTap={{ scale: 0.8 }}
+              transition={{ duration: 0.8 }}
+            >
+              <Link href={`/hero/${hero.id}`}>
+                <HeroPicture hero={hero} />
+              </Link>
+            </motion.div>
+          )
+        })}
       </motion.section>
+      <HeroSlider
+        heroes={heroes}
+        imageIndex={imageIndex}
+        page={page}
+        setPage={setPage}
+        direction={direction}
+      />
     </>
   )
 }

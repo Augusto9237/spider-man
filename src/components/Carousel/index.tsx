@@ -148,7 +148,7 @@ export default function Carousel({ heroes, activeId }: IProps) {
             {visibleItems?.map((item, position) => (
               <motion.div
                 key={item.id}
-                className={styles.hero}
+                className={`${styles.hero} ${styles[visibleItems[enPosition.MIDDLE].id]}`}
                 transition={{ duration: 0.8 }}
                 initial={{
                   x: -1500,
@@ -168,6 +168,7 @@ export default function Carousel({ heroes, activeId }: IProps) {
           </AnimatePresence>
         </div>
       </div>
+
       <motion.div
         className={`${styles.details} ${styles[visibleItems[enPosition.MIDDLE].id]}`}
         initial={{ opacity: 0 }}
@@ -182,8 +183,40 @@ export default function Carousel({ heroes, activeId }: IProps) {
 
 
 function getItemStyles(position: enPosition) {
+  const widthWindow = window.screen.width
+
+  if (widthWindow < 768) {
+    if (position === enPosition.FRONT) {
+      return {
+        left: 100,
+        filter: "blur(10px)",
+        scale: 1.1,
+        zIndex: 3,
+      };
+    }
+
+    if (position === enPosition.MIDDLE) {
+      return {
+        left: 300,
+        scale: 0.8,
+        top: "-10%",
+        zIndex: 2,
+      };
+    }
+
+    return {
+      filter: "blur(10px)",
+      scale: 0.5,
+      left: 450,
+      opacity: 0.8,
+      zIndex: 1,
+      top: "-14%",
+    };
+  }
+
   if (position === enPosition.FRONT) {
     return {
+      left: -350,
       filter: "blur(10px)",
       scale: 1.2,
       zIndex: 3,
@@ -192,7 +225,6 @@ function getItemStyles(position: enPosition) {
 
   if (position === enPosition.MIDDLE) {
     return {
-      left: 300,
       scale: 0.8,
       top: "-10%",
       zIndex: 2,
@@ -202,7 +234,7 @@ function getItemStyles(position: enPosition) {
   return {
     filter: "blur(10px)",
     scale: 0.6,
-    left: 160,
+    left: -150,
     opacity: 0.8,
     zIndex: 1,
     top: "-20%",

@@ -27,10 +27,21 @@
     max-width: calc($max-width - 400px);
     top: 50%;
   }
+
+  @media only screen and (max-width: 767px) {
+    filter: blur(4px);
+    width: 80%;
+    top: 60vh;
+  }
 }
 
 .imageContainer {
   position: relative;
+  bottom: 0;
+
+  @media only screen and (max-width: 767px) {
+    max-height: 82px;
+  }
 
   img {
     width: 100%;
@@ -38,11 +49,16 @@
     object-fit: contain;
     object-position: bottom;
   }
+
   &.spider-man-616 {
     height: $spider-man-616-height;
   }
   &.mulher-aranha-65 {
     height: $mulher-aranha-65-height;
+
+    @media only screen and (max-width: 767px) {
+      max-height: 67px;
+    }
   }
   &.spider-man-1610 {
     height: $spider-man-1610-height;
@@ -52,6 +68,10 @@
   }
   &.spider-ham-8311 {
     height: $spider-ham-8311-height;
+
+    @media only screen and (max-width: 767px) {
+      max-height: 32px;
+    }
   }
   &.spider-man-90214 {
     height: $spider-man-90214-height;
