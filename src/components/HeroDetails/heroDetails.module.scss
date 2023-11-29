@@ -3,7 +3,7 @@
   margin: 0;
   text-wrap: nowrap;
 
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 821px) {
     font-size: 34px;
   }
 }
@@ -13,7 +13,7 @@
   text-transform: uppercase;
   font-weight: 700;
 
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 821px) {
     font-size: 1.5rem;
   }
 }
@@ -24,7 +24,7 @@
   padding: 1rem 0;
   width: 70%;
 
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 821px) {
     width: 100%;
   }
 
@@ -33,7 +33,7 @@
       font-weight: 600;
       padding-right: 2rem;
 
-      @media only screen and (max-width: 767px) {
+      @media only screen and (max-width: 821px) {
         display: flex;
         flex-direction: column;
         font-size: 25px;
@@ -44,7 +44,8 @@
 
     .label {
       font-weight: normal;
-      @media only screen and (max-width: 767px) {
+
+      @media only screen and (max-width: 821px) {
         font-size: 20px;
         text-wrap: nowrap;
         font-weight: 200;

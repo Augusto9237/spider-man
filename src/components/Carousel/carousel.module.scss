@@ -4,8 +4,9 @@
   display: flex;
   flex: 1;
   width: 100%;
+  position: relative;
 
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 821px) {
     margin-top: -3.5rem;
     padding-top: 20%;
     flex-direction: column;
@@ -22,12 +23,15 @@
   align-items: center;
 
   @media only screen and (max-width: 767px) {
-    left: -90%;
+    left: 0;
+    right: 0;
     width: 100%;
   }
 }
 
 .wrapper {
+  display: flex;
+  justify-content: center;
   height: 130vh;
   position: relative;
   cursor: grab;
@@ -36,8 +40,13 @@
     cursor: grabbing;
   }
 
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 821px) {
     height: 600px;
+    margin-left: -30%;
+  }
+
+  @media only screen and (max-width: 420px) {
+    margin-left: -90%;
   }
 }
 
@@ -47,8 +56,11 @@
   margin-top: 3rem;
   height: 100%;
 
-  @media only screen and (max-width: 767px) {
-    margin-top: -90%;
+  @media only screen and (max-width: 821px) {
+    margin-top: -50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
     padding: 120px 40px 0px 40px;
     z-index: 20;
 
@@ -102,6 +114,10 @@
       );
     }
   }
+
+  @media only screen and (max-width: 767px) {
+    margin-top: -90%;
+  }
 }
 
 .hero {
@@ -109,6 +125,7 @@
   position: absolute;
   width: 100%;
   max-width: 500px;
+  align-items: center;
 
   @media only screen and (max-width: 767px) {
     width: 100%;
@@ -119,9 +136,11 @@
     width: 100%;
     object-fit: contain;
     object-position: center right;
+    margin: auto;
 
-    @media only screen and (max-width: 767px) {
+    @media only screen and (max-width: 821px) {
       margin: auto;
+      object-position: center;
     }
   }
 }

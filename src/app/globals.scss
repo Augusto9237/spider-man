@@ -28,7 +28,7 @@ body {
   height: calc(100vh - 3.5rem);
   overflow: hidden;
 
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 821px) {
     overflow-y: auto;
   }
 }

@@ -46,8 +46,7 @@ const swipePower = (offset: number, velocity: number) => {
   return Math.abs(offset) * velocity;
 };
 
-export const HeroSlider = ({ heroes, imageIndex, direction, page, setPage }: IProps) => {
-
+export function HeroSlide({ heroes, imageIndex, direction, page, setPage }: IProps) {
 
   const paginate = (newDirection: number) => {
     setPage([page + newDirection, newDirection]);

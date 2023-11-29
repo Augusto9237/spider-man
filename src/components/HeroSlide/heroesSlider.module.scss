@@ -47,7 +47,14 @@
   display: flex;
   align-items: center;
   position: relative;
-  padding: 40px 74px;
+
+  @media only screen and (max-width: 821px) {
+    padding: 12.6rem;
+  }
+
+  @media only screen and (max-width: 420px) {
+    padding: 4.7rem;
+  }
 
   img {
     height: auto;

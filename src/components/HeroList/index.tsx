@@ -5,7 +5,7 @@ import { useState } from "react";
 import { wrap } from "popmotion";
 
 import HeroPicture from "../HeroPicture";
-import { HeroSlider } from "../HeroSlider";
+import { HeroSlide } from "../HeroSlide";
 
 import styles from "./heroesList.module.scss";
 
@@ -58,7 +58,7 @@ export default function HeroesList({ heroes }: IProps) {
           )
         })}
       </motion.section>
-      <HeroSlider
+      <HeroSlide
         heroes={heroes}
         imageIndex={imageIndex}
         page={page}

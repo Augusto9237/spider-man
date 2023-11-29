@@ -185,7 +185,7 @@ export default function Carousel({ heroes, activeId }: IProps) {
 function getItemStyles(position: enPosition) {
   const widthWindow = window.screen.width
 
-  if (widthWindow < 768) {
+  if (widthWindow < 821) {
     if (position === enPosition.FRONT) {
       return {
         left: 100,
