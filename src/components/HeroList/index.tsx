@@ -12,8 +12,6 @@ import styles from "./heroesList.module.scss";
 import { spidermanFont } from "@/fonts"
 import { IHeroData } from "@/interfaces/heroes"
 
-
-
 interface IProps {
   heroes: IHeroData[]
 }
